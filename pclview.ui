@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1222</width>
-    <height>671</height>
+    <width>1196</width>
+    <height>1000</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,7 +41,7 @@
            </widget>
            <widget class="QLineEdit" name="lineEdit_2">
             <property name="text">
-             <string>10</string>
+             <string>3</string>
             </property>
            </widget>
            <widget class="QLabel" name="label">
@@ -51,7 +51,7 @@
            </widget>
            <widget class="QLineEdit" name="lineEdit">
             <property name="text">
-             <string>0.001</string>
+             <string>0.01</string>
             </property>
            </widget>
           </widget>

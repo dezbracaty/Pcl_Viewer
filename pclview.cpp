@@ -1,8 +1,8 @@
 #include "pclview.h"
 #include "ui_pclview.h"
 #include "readmodule.h"
-double scale_Global      = 0.001;
-int    point_Size_Global = 10;
+double scale_Global      = 0.01;
+int    point_Size_Global = 3;
 PclView::PclView(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::PclView)
@@ -30,10 +30,10 @@ void PclView::on_pushButton_clicked()
                                 "open",
                                 "../"
                 );
-
-    _Cloud.reset(new PointCloudT);
+    //_Cloud->clear();
+    //_Cloud.reset(new PointCloudT);
     readModule::readMapData(path.toStdString(),_Cloud);
-    _viewer->removePointCloud("Map");
+    //_viewer->removePointCloud("Map");
     _viewer->addPointCloud(_Cloud,"Map");
     _viewer->setPointCloudRenderingProperties(
                 pcl::visualization::PCL_VISUALIZER_POINT_SIZE, point_Size_Global, "Map");
@@ -47,10 +47,11 @@ void PclView::on_pushButton_2_clicked()
                                 "open",
                                 "../"
                                 );
-    _Cloud.reset(new PointCloudT);
+    //_Cloud.clear();
+    //_Cloud.reset(new PointCloudT);
     readModule::readSingleLineData(path.toStdString(),_Cloud);
 
-    _viewer->removePointCloud("Map");
+    //_viewer->removePointCloud("Map");
     for(auto p:_Cloud->points)
     {
 
