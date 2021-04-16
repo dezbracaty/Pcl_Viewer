@@ -9,6 +9,6 @@ int main(int argc, char *argv[])
 #endif
     QApplication a(argc, argv);
     PclView w;
-    w.show();
+    w.showFitSize();
     return a.exec();
 }

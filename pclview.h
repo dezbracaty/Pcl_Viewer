@@ -6,6 +6,10 @@
 #include <QFileDialog>
 #include <QTextCodec>
 #include <QMessageBox>
+#include <QColorDialog>
+#include <QScreen>
+#include <qDebug>
+#include <QString>
 //Own file
 #include <readmodule.h>
 
@@ -58,6 +62,7 @@ class PclView : public QMainWindow
 public:
     PclView(QWidget *parent = nullptr);
     ~PclView();
+    void showFitSize();
 
 private slots:
     void on_pushButton_clicked();
@@ -70,12 +75,14 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_4_clicked();
+
 private:
     Ui::PclView *ui;
     pcl::visualization::PCLVisualizer::Ptr      _viewer;
     boost::weak_ptr<pcl::visualization::PCLVisualizer> _weak_viewer;
     PointCloudT::Ptr                            _convertCloud;
     PointCloudT::Ptr                            _Cloud;
-
+    QString                                     _Default_Dir="../";
 };
 #endif // PCLVIEW_H

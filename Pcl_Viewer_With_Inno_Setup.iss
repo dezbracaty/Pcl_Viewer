@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Pcl_Viewer"
-#define MyAppVersion "1.1"
+#define MyAppVersion "1.3"
 #define MyAppPublisher "GithubCompany, Inc."
 #define MyAppURL "https://github.com/dezbracaty/Pcl_Viewer"
 #define MyAppExeName "PclView.exe"
@@ -21,14 +21,14 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={autopf}\{#MyAppName}
+DefaultDirName=D:\Pcl_Viewer\{#MyAppName}{#MyAppVersion}
 ChangesAssociations=yes
 DisableProgramGroupPage=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=commandline
 OutputDir=D:\QTProjects\Pcl_Viewer-master\CompilerOutPut
-OutputBaseFilename=Pcl_Viewer_V1.1
+OutputBaseFilename={#MyAppName}{#MyAppVersion}
 SetupIconFile=D:\Pictures\Logo\Pcl\a5673-es2rc-001.ico
 Compression=lzma
 SolidCompression=yes
