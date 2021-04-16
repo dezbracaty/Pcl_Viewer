@@ -1,9 +1,9 @@
 QT          += core gui
 RC_ICONS    += a5673-es2rc-001.ico
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-DEFINES += VTK_INIT_WITH_OPENGL
 CONFIG += c++11
 win32{
+    DEFINES += VTK_INIT_WITH_OPENGL
     message("Windows PlatForm");
     INCLUDEPATH += D:\PCL_1.9.1\include\pcl-1.9
     INCLUDEPATH += D:\PCL_1.9.1\include\pcl-1.9\pcl
@@ -171,6 +171,7 @@ win32{
 }
 #linux平台
 unix{
+DEFINES += VTK_INIT_WITH_OPENGL2
 message("Linux PlatForm")
 INCLUDEPATH += /usr/local/include/vtk-8.1
 INCLUDEPATH += /usr/local/include/pcl-1.9
